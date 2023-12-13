@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Train;
 use Illuminate\Support\Carbon;
 
-class trainController extends Controller
+class TrainController extends Controller 
 {
     public function index(){
         $currentDate = Carbon::today();
-        $todayTrains = Train::whereDate('data_parteza', $currentDate);
+        $todayTrains = Train::whereDate('data_partenza', $currentDate)->get();
         return view('trainIndex', compact('todayTrains'));
     }
 }
