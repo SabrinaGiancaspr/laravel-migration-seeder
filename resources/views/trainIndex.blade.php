@@ -10,10 +10,9 @@
 <body>
     <div class="container">
         @foreach ($todayTrains as $train)
-        <li> Orario Partenza: {{$train->orario_partenza}} - Stazione Partenza: {{$train->stazione_di_arrivo}} - Stazione d'arrivo:  {{$train->stazione_di_arrivo}}</li>
+        <li> <span class="fw-bold">Orario Partenza:  </span>{{$train->orario_partenza}} - <span class="fw-bold">Stazione Partenza:</span> {{$train->stazione_di_partenza}} - <span class="fw-bold">Stazione d'arrivo:</span>  {{$train->stazione_di_arrivo}}</li>
             
         @endforeach
     </div>
-    
 </body>
 </html>
